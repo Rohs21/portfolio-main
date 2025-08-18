@@ -1,9 +1,11 @@
 import { I_Experience } from "@/src/types/type";
 
 export const words = [
-  "Design Engineer",
+  "Full-Stack Web Engineer",
   "Open Source Contributor",
-  "Solana Developer",
+  "Software Developer",
+  "DSA Problem Solver",
+  "Ai Enthusiast",
 ];
 
 export const experienceData: I_Experience[] = [
