@@ -1,7 +1,7 @@
 import { I_Experience } from "@/src/types/type";
 
 export const words = [
-  "Full-Stack Web Engineer",
+  "Full-Stack Web Developer",
   "Open Source Contributor",
   "Software Developer",
   "DSA Problem Solver",
