@@ -5,7 +5,7 @@ import LeetCodeStats from "./leetcode-stats";
 
 const LeetCodeStatsSection: React.FC = () => {
   return (
-    <section className="mt-10 10w-full flex justify-center mt-2">
+    <section className="mt-10 10w-full flex justify-center">
       <div className="max-w-6xl w-full px-4 flex flex-col gap-3 transition-all duration-700 delay-1000">
         <p className={`text-2xl text-black dark:text-white mb-2`}>
           LeetCode Stats

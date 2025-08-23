@@ -1,7 +1,6 @@
 "use client"
 
 import React from "react";
-import GitHubContributionGraph from "./bento/Github";
 import { SkillsCarousel } from "./bento/Skills";
 
 
@@ -25,11 +24,6 @@ export default function BentoGrid() {
         <div className="bg-card rounded-xl shadow-md border border-gray-200 flex items-center justify-center min-h-[180px]">
           <SkillsCarousel />
         </div> 
-
-        {/* GitHub Graph */}
-        {/* <div className="bg-card rounded-2xl shadow-lg border border-gray-200 md:col-span-2 flex items-center justify-center min-h-[220px]">
-          <GitHubContributionGraph />
-        </div> */}
       </div>
     </div>
   );

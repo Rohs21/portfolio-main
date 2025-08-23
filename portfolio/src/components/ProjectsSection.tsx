@@ -14,7 +14,7 @@ export const ProjectsSection = () => {
     <section className="pt-8 lg:pt-16 px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <Title title="Proof Of Work" subtitle="A showcase of my work in full-stack & blockchain applications." />
+        <Title title="Projects" subtitle="Here are some of my key projects. In addition, I have worked on several other projects, including ongoing and near-completion ones. For a more comprehensive view of my work, please visit my GitHub profile." />
         
 
         {/* Projects Grid */}
