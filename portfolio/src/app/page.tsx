@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { Hero } from "@/src/components/Hero";
 import { ExperienceSection } from "@/src/components/ExperienceSection";
 import { ProjectsSection } from "../components/ProjectsSection";
-
+import LeetCodeStats from "../components/LeetcodeStats/LeetcodeStats";
+import GithubContribution from "../components/GithubContribution/GithubContribution";
 import { InteractiveGridPattern } from "../components/ui/interactive-grid-pattern";
 import DockBar from "../components/Dock";
 import BentoGrid from "../components/BentoSection";
@@ -24,6 +25,8 @@ const Home = () => {
         <ExperienceSection />
         <ProjectsSection />
         <DockBar />
+        <GithubContribution />
+        <LeetCodeStats />
         <Footer/>
       </div>
     </div>
