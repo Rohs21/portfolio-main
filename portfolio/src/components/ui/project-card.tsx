@@ -77,7 +77,7 @@ export const ProjectCard = ({
         <div className="flex items-center justify-between mt-auto">
           {/* Tech Stack */}
           <div className="flex flex-wrap gap-1.5">
-            {tech.slice(0, 3).map((item) => (
+            {tech.map((item) => (
               <span
                 key={item}
                 className="

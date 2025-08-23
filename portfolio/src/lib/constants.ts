@@ -43,13 +43,13 @@ export const projects = [
     imageSrc: "/projects/Tripally.png",
   },
   {
-    title: "MediChain",
-    description: "Solana platform for secure health data.",
-    tech: ["Next.js", "TypeScript", "Solana", "Anchor", "PostgreSQL"],
-    status: "In Development",
+    title: "Books-Hub",
+    description: "An interactive React-based Book Hub web app featuring book search and trending titles with effective state management.",
+    tech: ["React.js", "HTTP", "Tailwid CSS", "API", "More.."],
+    status: "Live",
     year: "2025",
-    link: "https://medichain.shrid.in",
-    code: "https://github.com/shridmishra/medichain",
-    imageSrc: "/projects/medichain.png",
+    link: "https://github.com/Rohs21/Books-app",
+    code: "https://github.com/Rohs21/Books-app",
+    imageSrc: "/projects/Books-hub.png",
   }
 ];
