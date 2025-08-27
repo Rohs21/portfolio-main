@@ -48,7 +48,7 @@ export const projects = [
     tech: ["React.js", "HTTP", "Tailwid CSS", "API", "More.."],
     status: "Live",
     year: "2025",
-    link: "https://github.com/Rohs21/Books-app",
+    link: "https://readvault.vercel.app/",
     code: "https://github.com/Rohs21/Books-app",
     imageSrc: "/projects/Books-hub.png",
   }

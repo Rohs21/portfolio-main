@@ -101,21 +101,61 @@ export const Hero = () => {
             </div>
           </div>
           <div className="flex gap-6 mt-10">
-            <div className="bg-black-800 hover:bg-gray-700 rounded-sm px-4 py-2.5 flex items-center space-x-2.5 transition-all duration-200 border border-gray-700 hover:border-gray-600">
-              <a className="flex gap-2  px-4 items-center bg-lightBlue dark:bg-darkBlue text-white dark:text-lightBlue  p-2 w-fit text-sm rounded-md">
-              Work With Me
-            </a>
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path></svg>
-            </div>
-            
-            <div className="bg-black-800 hover:bg-gray-700 rounded-sm px-4 py-2.5 flex items-center space-x-2.5 transition-all duration-200 border border-gray-700 hover:border-gray-600">
-              <div className="h-2 text-gray-400 group-hover:text-gray-300 transition-colors duration-200" />
-                <span className="text-gray-300 text-sm font-medium group-hover:text-white transition-colors duration-200">
-                  Resume
-                </span>
-              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="m12 16 4-5h-3V4h-2v7H8z"></path><path d="M20 18H4v-7H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-2v7z"></path></svg>
-            </div>
-          </div>
+  {/* Work With Me */}
+  <a
+    href="mailto:rohans212004@gmail.com"
+    className="bg-gray-100 hover:bg-gray-200 dark:bg-black dark:hover:bg-gray-900 rounded-sm px-4 py-2.5 flex items-center gap-2.5 transition-all duration-200 border border-gray-300 hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-600"
+  >
+    <span className="flex gap-2 px-4 items-center bg-lightBlue dark:bg-darkBlue text-black dark:text-white p-2 w-fit text-sm rounded-md">
+      Work With Me
+    </span>
+    <svg
+      stroke="currentColor"
+      fill="currentColor"
+      strokeWidth="0"
+      viewBox="0 0 16 16"
+      height="1em"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+      className="text-black dark:text-white"
+    >
+      <path
+        fillRule="evenodd"
+        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 
+          .708-.708l4 4a.5.5 0 0 1 0 
+          .708l-4 4a.5.5 0 0 1-.708-.708L13.293 
+          8.5H1.5A.5.5 0 0 1 1 8"
+      ></path>
+    </svg>
+  </a>
+
+  {/* Resume */}
+  <a
+    href="https://drive.google.com/file/d/1Xlo0Vviaqf5Z1Pl9B5R26gUMo7xQWfe5/view?usp=sharing"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-gray-100 hover:bg-gray-200 dark:bg-black dark:hover:bg-gray-900 rounded-sm px-4 py-2.5 flex items-center gap-2.5 transition-all duration-200 border border-gray-300 hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-600"
+  >
+    <span className="text-black text-sm font-medium group-hover:text-black dark:text-white dark:group-hover:text-white transition-colors duration-200">
+      Resume
+    </span>
+    <svg
+      stroke="currentColor"
+      fill="currentColor"
+      strokeWidth="0"
+      viewBox="0 0 24 24"
+      height="1em"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+      className="text-black dark:text-white"
+    >
+      <path d="m12 16 4-5h-3V4h-2v7H8z"></path>
+      <path d="M20 18H4v-7H2v7c0 1.103.897 2 2 
+        2h16c1.103 0 2-.897 2-2v-7h-2v7z"></path>
+    </svg>
+  </a>
+</div>
+
         </div>
       </div>
     </section>
