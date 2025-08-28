@@ -26,16 +26,14 @@ export const Hero = () => {
           <div className="group flex items-start">
             <BorderFrame className="w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 ">
               <Image
-                src="/assets/Me.jpg"
+                src="/assets/Me.png"
                 width={128}
                 height={128}
                 alt="Rohan Singh"
                 className="
         w-full h-full object-cover 
         transition-all duration-300
-       lg:group-hover:filter-none lg:filter lg:grayscale
-        
-      "
+       lg:group-hover:filter-none lg:filter lg:grayscale"
                 priority
               />
             </BorderFrame>
