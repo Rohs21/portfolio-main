@@ -32,14 +32,14 @@ const DockBar = () => {
             icon: (
                 <IconBrandX className="h-full w-full text-foreground hover:text-foreground/50 transition-colors" />
             ),
-            href: "https://x.com/shridmishra",
+            href: "https://x.com/RohanSingh2104",
         },
         {
             title: "GitHub",
             icon: (
                 <IconBrandGithub className="h-full w-full text-foreground hover:text-foreground/50 transition-colors" />
             ),
-            href: "https://github.com/shridmishra",
+            href: "https://github.com/Rohs21",
         },
         {
             title: "Toggle Theme",
