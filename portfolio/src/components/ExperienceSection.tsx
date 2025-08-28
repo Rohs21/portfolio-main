@@ -21,10 +21,10 @@ export const ExperienceSection = () => {
         {/* Experience Timeline */}
         <div className="relative">
           {/* Central Timeline line - Hidden on mobile, visible on tablet+ */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-0.5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-black/60 via-black/40 to-black/20 dark:from-white/60 dark:via-white/40 dark:to-white/20"></div>
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-0.5 top-0 bottom-0 w-0.5 bg-black dark:bg-white/60"></div>
           
           {/* Mobile Timeline line - Left aligned for mobile */}
-          <div className="md:hidden absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-black/60 via-black/40 to-black/20 dark:from-white/60 dark:via-white/40 dark:to-white/20"></div>
+          <div className="md:hidden absolute left-6 top-0 bottom-0 w-0.5 bg-black dark:bg-white/60"></div>
           
           {experienceData.map((exp: I_Experience, idx) => (
             <motion.div
