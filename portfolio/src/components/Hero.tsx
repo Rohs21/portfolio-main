@@ -29,7 +29,7 @@ export const Hero = () => {
                 src="/assets/Me.jpg"
                 width={128}
                 height={128}
-                alt="Shrid Mishra"
+                alt="Rohan Singh"
                 className="
         w-full h-full object-cover 
         transition-all duration-300
