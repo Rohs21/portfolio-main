@@ -33,6 +33,16 @@ export const experienceData: I_Experience[] = [
 
 export const projects = [
   {
+    title: "Neuro-Learn Ai",
+    description: "AI-powered NeuroLearn is a smart learning platform offering personalized content, real-time quizzes, automated summaries, and advanced interview prep with voice recording, video call integration, and performance analytics to boost learning and career readiness.",
+    tech: ["Next.js", "Typescript", "Gemini-API", "Prisma", "NeonDB", "More.."],
+    status: "Live",
+    year: "2025",
+    link: "https://github.com/Rohs21/NeuroLearn-Ai",
+    code: "https://github.com/Rohs21/Neurolearn-Ai",
+    imageSrc: "/projects/image.png",
+  },
+  {
     title: "Trip-Ally",
     description: "A secure and efficient trip booking platform with JWT authentication and password hashing for robust data protection.",
     tech: ["Node.js", "Express.js", "React.js", "MongoDB", "Taiwind CSS", "More.."],
