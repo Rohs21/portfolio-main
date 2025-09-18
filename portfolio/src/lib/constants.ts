@@ -40,7 +40,17 @@ export const projects = [
     year: "2025",
     link: "https://github.com/Rohs21/NeuroLearn-Ai",
     code: "https://github.com/Rohs21/Neurolearn-Ai",
-    imageSrc: "/projects/image.png",
+    imageSrc: "/projects/Neuro-learn.png",
+  },
+  {
+    title: "Pro-Mock: Interview Mocker-Ai",
+    description: "AI-powered Interview Mocker that generates real-time, job-specific interviews from the title and description, with voice and video integration for a true-to-life interview experience.",
+    tech: ["Next.js", "javascript", "Tailwind CSS", "Gemini-API", "Drizzle ORM", "NeonDB","Clerk Auth.", "More.."],
+    status: "Live",
+    year: "2025",
+    link: "Promock.vercel.app",
+    code: "https://github.com/Rohs21/Promock",
+    imageSrc: "/projects/promock.png",
   },
   {
     title: "Trip-Ally",
@@ -60,6 +70,6 @@ export const projects = [
     year: "2025",
     link: "https://readvault.vercel.app/",
     code: "https://github.com/Rohs21/Books-app",
-    imageSrc: "/projects/Books-hub.png",
+    imageSrc: "/projects/books-app.png",
   }
 ];
