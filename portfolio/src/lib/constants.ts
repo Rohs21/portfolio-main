@@ -59,7 +59,7 @@ export const projects = [
     tech: ["Next.js", "javascript", "Tailwind CSS", "Gemini-API", "Drizzle ORM", "NeonDB","Clerk Auth.", "More.."],
     status: "Live",
     year: "2025",
-    link: "Promock.vercel.app",
+    link: "https://Promock.vercel.app",
     code: "https://github.com/Rohs21/Promock",
     imageSrc: "/projects/promock.png",
   },
