@@ -36,7 +36,7 @@ export const projects = [
   {
     title: "SyncSketch",
     description: "Built a custom Excalidraw-like collaborative drawing app from scratch, implementing real-time collaboration with HTTP and WebSockets, and using Prisma ORM for efficient backend development.",
-    tech: ["Next.js", "Typescript", "TurboRepo", "Prisma", "NeonDB", ,"WebSockets","More.."],
+    tech: ["Next.js", "Typescript", "TurboRepo", "Prisma", "NeonDB", "WebSockets", "More.."],
     status: "Live",
     year: "2025",
     link: "https://syncsketch-rkwk.onrender.com/",
