@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/src/lib/utils";
-import React, { useState, useEffect, useMemo, useRef } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 interface InteractiveGridPatternProps extends React.SVGProps<SVGSVGElement> {
   width?: number;
@@ -18,27 +18,30 @@ export function InteractiveGridPattern({
   ...props
 }: InteractiveGridPatternProps) {
   const [hoveredSquare, setHoveredSquare] = useState<number | null>(null);
-  const containerRef = useRef<HTMLDivElement | null>(null);
   const [containerSize, setContainerSize] = useState({ w: 0, h: 0 });
 
-  // Measure parent container size (not just screen)
+  // Keep the pattern sized to the full document so it remains visible while scrolling.
   useEffect(() => {
     function updateSize() {
-      if (containerRef.current) {
-        setContainerSize({
-          w: containerRef.current.offsetWidth,
-          h: containerRef.current.offsetHeight,
-        });
-      } else {
-        setContainerSize({
-          w: window.innerWidth,
-          h: window.innerHeight,
-        });
-      }
+      const doc = document.documentElement;
+      const body = document.body;
+
+      setContainerSize({
+        w: Math.max(doc.clientWidth, window.innerWidth),
+        h: Math.max(doc.scrollHeight, body.scrollHeight, window.innerHeight),
+      });
     }
+
     updateSize();
+
+    const resizeObserver = new ResizeObserver(() => updateSize());
+    resizeObserver.observe(document.body);
+
     window.addEventListener("resize", updateSize);
-    return () => window.removeEventListener("resize", updateSize);
+    return () => {
+      window.removeEventListener("resize", updateSize);
+      resizeObserver.disconnect();
+    };
   }, []);
 
   const { horizontal, vertical } = useMemo(() => {
@@ -48,8 +51,46 @@ export function InteractiveGridPattern({
     };
   }, [containerSize, width, height]);
 
+  useEffect(() => {
+    function handleMouseMove(event: MouseEvent) {
+      const x = event.clientX;
+      const y = event.clientY + window.scrollY;
+      const col = Math.floor(x / width);
+      const row = Math.floor(y / height);
+      const squareIndex = row * horizontal + col;
+
+      if (
+        col < 0 ||
+        row < 0 ||
+        col >= horizontal ||
+        row >= vertical ||
+        horizontal <= 0 ||
+        vertical <= 0
+      ) {
+        setHoveredSquare(null);
+        return;
+      }
+
+      setHoveredSquare(squareIndex);
+    }
+
+    function handleMouseLeaveDocument() {
+      setHoveredSquare(null);
+    }
+
+    window.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseleave", handleMouseLeaveDocument);
+    window.addEventListener("blur", handleMouseLeaveDocument);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseleave", handleMouseLeaveDocument);
+      window.removeEventListener("blur", handleMouseLeaveDocument);
+    };
+  }, [horizontal, vertical, width, height]);
+
   return (
-    <div ref={containerRef} className="absolute inset-0">
+    <div className="absolute inset-0 pointer-events-none">
       <svg
         width={horizontal * width}
         height={vertical * height}
@@ -67,14 +108,12 @@ export function InteractiveGridPattern({
               width={width}
               height={height}
               className={cn(
-                "stroke-[var(--background-border)] transition-all duration-100 ease-in-out [&:not(:hover)]:duration-1000",
+                "stroke-[var(--background-border)] transition-all duration-300 ease-out",
                 hoveredSquare === index
                   ? "fill-gray-300/30"
                   : "fill-transparent",
                 squaresClassName
               )}
-              onMouseEnter={() => setHoveredSquare(index)}
-              onMouseLeave={() => setHoveredSquare(null)}
             />
           );
         })}
