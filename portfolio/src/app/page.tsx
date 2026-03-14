@@ -26,7 +26,7 @@ const Home = () => {
         <ProjectsSection />
         <DockBar />
         <GithubContribution />
-        <LeetCodeStats />
+        {/* <LeetCodeStats /> */}
         <Footer/>
       </div>
     </div>
