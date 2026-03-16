@@ -10,6 +10,7 @@ import { InteractiveGridPattern } from "../components/ui/interactive-grid-patter
 import DockBar from "../components/Dock";
 import BentoGrid from "../components/BentoSection";
 import Footer from "../components/Footer";
+import TopRightSocialLinks from "../components/TopRightSocialLinks";
 
 const Home = () => {
   const [mounted, setMounted] = useState(false);
@@ -19,6 +20,7 @@ const Home = () => {
   return (
     <div className="min-h-screen min-w-full bg-background relative overflow-hidden font-display antialiased selection:bg-pink-600 selection:text-foreground">
       <InteractiveGridPattern />
+      <TopRightSocialLinks />
       <div className="relative z-10 mx-auto mt-6 px-4 sm:px-10 py-12 sm:py-16 mb-4">
         <Hero />
         <BentoGrid />
